@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: rgb(134, 134, 184);
+            color: white;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            background-color: rgb(4, 4, 79);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            font-size: 1.05rem;
+            list-style: none;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(163, 163, 201);
+            font-size: 1.10rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #8288e0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container:hover {
+            background: #5c5f8d;
+        }
+
+        .container p {
+            font-size: 1.2rem;
+        }
+
+        button {
+            background: #5b64e0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            display: flex;
+            background-color: rgb(21, 21, 89);
+            justify-content: center;
+            bottom: 0;
+            color: rgb(161, 157, 157);
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Nirajan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contactme.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Resume Section</h1>
+        <p><br>Click the button below to view / download my resume.<br><br></p>
+        <button id="downloadBtn">Download Resume</button>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const confirmation = confirm("Do you want to download the resume?");
+            if (confirmation) {
+                window.location.href = 'Resume.pdf'
+            }
+           
+        });
+    </script>
+
+    <footer>
+        <p> Copyright &#169; adhikarinirajan.com.np | All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>
